@@ -12,7 +12,7 @@ include 'common.php';
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="WeasleyJumper - Hogwarts.vn" />
         <meta property="og:description"        content="Christmas 2017 - Nhận áo len Weasley của bạn!" />
-        <meta property="og:image"              content="http://i.imgur.com/Q9g447d.png" />
+        <meta property="og:image"              content="https://i.imgur.com/jjCIKXj.png" />
 
 
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
