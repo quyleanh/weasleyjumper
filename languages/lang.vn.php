@@ -25,11 +25,11 @@ $lang['OWL_4'] = 'Hermes ngạo nghễ';
 $lang['LB_CHOOSE_BACKGROUND'] = 'Chọn nền:';
 $lang['BG_1'] = 'Hình nền 1';
 $lang['BG_2'] = 'Hình nền 2';
-$lang['BG_3'] = 'Hẻm Xéo mùa nhập học';
-$lang['BG_4'] = 'Làng Hosmeade mùa đông';
-$lang['BG_5'] = 'Đêm ở Privet Drive';
-$lang['BG_6'] = 'Sân Quidditch chiều êm ả';
-$lang['BG_7'] = 'Sân Quidditch ngày nắng';
+$lang['BG_3'] = 'Hình nền 3';
+$lang['BG_4'] = 'Hình nền 4';
+$lang['BG_5'] = 'Hình nền 5';
+$lang['BG_6'] = 'Hình nền 6';
+$lang['BG_7'] = 'Hình nền 7';
 
 $lang['LB_CHOOSE_SKIN'] = 'Chọn màu da:';
 

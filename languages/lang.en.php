@@ -25,11 +25,11 @@ $lang['OWL_4'] = 'Hermes';
 $lang['LB_CHOOSE_BACKGROUND'] = 'Choose your background:';
 $lang['BG_1'] = 'Background 1';
 $lang['BG_2'] = "Background 2";
-$lang['BG_3'] = "Diagon Alley's fall";
-$lang['BG_4'] = "Hogsmeade's winter";
-$lang['BG_5'] = 'Nightfall on Privet Drive';
-$lang['BG_6'] = 'Quidditch pitch at dusk';
-$lang['BG_7'] = 'Quidditch pitch in the sun';
+$lang['BG_3'] = "Background 3";
+$lang['BG_4'] = "Background 4";
+$lang['BG_5'] = 'Background 5';
+$lang['BG_6'] = 'Background 6';
+$lang['BG_7'] = 'Background 7';
 
 $lang['LB_CHOOSE_SKIN'] = 'Choose your skin:';
 
