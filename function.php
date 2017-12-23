@@ -164,11 +164,24 @@ function getOptions($bg = 'option1',
     $letter = $letterOption;
     return array($bg, $skin, $face, $hair, $color, $scarf, $letter);
 }
+
+function save_image($inPath, $outPath) { //Download images from remote server
+    $in = fopen($inPath, "rb");
+    $out = fopen($outPath, "wb");
+    while ($chunk = fread($in, 8192)) {
+        fwrite($out, $chunk, 8192);
+    }
+    fclose($in);
+    fclose($out);
+}
+
 ?>
 
 <?php
 
 $folderName = 'avas';
+
+$isDownload = $_GET["download"];
 
 if (file_exists($folderName)) {
     foreach (new DirectoryIterator($folderName) as $fileInfo) {
@@ -179,14 +192,21 @@ if (file_exists($folderName)) {
             unlink($fileInfo->getRealPath());
         }
     }
+} else {
+    mkdir($folderName, 0700);
 }
 
 list($bg, $skin, $face, $hair, $color, $scarf, $letter) = getOptions($_GET["optionsBgs"], $_GET["optionsSkins"], $_GET["optionsFaces"], $_GET["optionsHairs"], $_GET["optionsHairColors"], $_GET["scarf"], $_GET["letter"]);
 $haveGlass = "no";
 $shirt = rand(1, 6); //choose random shirt
 //define the width and height of our images
-define("WIDTH", 1000);
-define("HEIGHT", 1000);
+if ($isDownload == "no") { //If not downloading, use small image
+    define("WIDTH", 500);
+    define("HEIGHT", 500);
+} else {
+    define("WIDTH", 1000);
+    define("HEIGHT", 1000);
+}
 $dest_image = imagecreatetruecolor(WIDTH, HEIGHT);
 
 //make sure the transparency information is saved
@@ -199,13 +219,23 @@ $trans_background = imagecolorallocatealpha($dest_image, 0, 0, 0, 127);
 imagefill($dest_image, 0, 0, $trans_background);
 
 //take create image resources out of the 3 pngs we want to merge into destination image
-$bgPath = 'images/background/' . $bg .'.jpg';
-$skinPath = 'images/skin/' . $skin . '.png';
-$letterPath = 'images/letter/' . $letter . '.png';
-$facePath = 'images/face/' . $face . '.png';
-$hairPath = 'images/hair/' . $hair . '.png';
-$shirtPath = 'images/shirt/' . $shirt . '.png';
-$scarfPath = 'images/scarf/' . $scarf . '.png';
+if ($isDownload == "no") {
+    $bgPath = 'images/background-min/' . $bg . '.jpg';
+    $skinPath = 'images/skin-min/' . $skin . '.png';
+    $letterPath = 'images/letter-min/' . $letter . '.png';
+    $facePath = 'images/face-min/' . $face . '.png';
+    $hairPath = 'images/hair-min/' . $hair . '.png';
+    $shirtPath = 'images/shirt-min/' . $shirt . '.png';
+    $scarfPath = 'images/scarf-min/' . $scarf . '.png';
+} else {
+    $bgPath = 'images/background/' . $bg . '.jpg';
+    $skinPath = 'images/skin/' . $skin . '.png';
+    $letterPath = 'images/letter/' . $letter . '.png';
+    $facePath = 'images/face/' . $face . '.png';
+    $hairPath = 'images/hair/' . $hair . '.png';
+    $shirtPath = 'images/shirt/' . $shirt . '.png';
+    $scarfPath = 'images/scarf/' . $scarf . '.png';
+}
 
 switch ($color) {
     case 'blonde':
@@ -281,19 +311,6 @@ $path = "avas/" . $result . ".png";
 
 //send the appropriate headers and output the image in the browser
 header('Content-Type: image/png');
-
-$folderName = 'avas';
-
-if (file_exists($folderName)) {
-    foreach (new DirectoryIterator($folderName) as $fileInfo) {
-        if ($fileInfo->isDot()) {
-            continue;
-        }
-        if ($fileInfo->isFile() && time() - $fileInfo->getCTime() >= 60 * 30) {
-            unlink($fileInfo->getRealPath());
-        }
-    }
-}
 
 imagepng($dest_image, $path);
 //imagedestroy($im);

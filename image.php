@@ -73,7 +73,7 @@ include 'common.php';
                     xmlhttp.open("GET", "function.php?optionsBgs=" + bg_value + "&optionsSkins=" + skin_value + 
                             "&optionsFaces=" + face_value + "&optionsHairs=" + hair_value +
                             "&optionsHairColors=" + color_value + "&scarf=" + scarf_value +
-                            "&letter=" + letter_value, true);
+                            "&letter=" + letter_value + "&download=no", true);
                     xmlhttp.send();
 
                     /*$.ajax({
@@ -95,17 +95,58 @@ include 'common.php';
             });
 
             function downloadImage() {
-                var urlImage = document.getElementById("preview-image").src;
-                var d = new Date();
-                var month = d.getMonth() + 1;
-                var fileName = d.getFullYear() + "" + month + "" + d.getDate() + "" + d.getTime() + ".jpg"; 
-                var a = document.createElement('a');
-                a.href = urlImage;
-                a.download = fileName;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-            }
+                skin_value = $("input[name='optionsSkins']:checked").val();
+                face_value = $("input[name='optionsFaces']:checked").val();
+                //hair_value = $("#optionsHairs option:selected").text();
+                var hair_e = document.getElementById("optionsHairs");
+                hair_value = hair_e.options[hair_e.selectedIndex].value;
+
+                //color_value = $("#optionsHairColors option:selected").text();
+                var color_e = document.getElementById("optionsHairColors");
+                color_value = color_e.options[color_e.selectedIndex].value;
+
+                var bg_e = document.getElementById("optionsBgs");
+                bg_value = bg_e.options[bg_e.selectedIndex].value;
+
+                scarf_value = $("input[name='optionsScarfs']:checked").val();
+                letter_value = $("#optionsLetters option:selected").text();
+                //glass_value = $("input[name='optionsGlass']:checked").val();
+                // alert(letter_value);
+
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        // alert(this.responseText);
+                        document.getElementById("pre-download-image").href = this.responseText;
+                        var d = new Date();
+                        var month = d.getMonth() + 1;
+                        var fileName = d.getFullYear() + "" + month + "" + d.getDate() + "" + d.getTime() + ".jpg";
+                        var a = document.getElementById("pre-download-image");
+                        a.download = fileName;
+                        a.click();
+
+                    }
+                };
+
+                xmlhttp.open("GET", "function.php?optionsBgs=" + bg_value + "&optionsSkins=" + skin_value +
+                        "&optionsFaces=" + face_value + "&optionsHairs=" + hair_value +
+                        "&optionsHairColors=" + color_value + "&scarf=" + scarf_value +
+                        "&letter=" + letter_value + "&download=yes", true);
+                xmlhttp.send();
+
+
+
+                // var urlImage = document.getElementById("pre-download-image").src;
+                //        var d = new Date();
+                //        var month = d.getMonth() + 1;
+                //        var fileName = d.getFullYear() + "" + month + "" + d.getDate() + "" + d.getTime() + ".jpg";
+                //var a = document.createElement('a');
+             //   a.href = urlImage;
+               // a.download = fileName;
+              //  document.body.appendChild(a);
+              //  a.click();
+               // document.body.removeChild(a);
+           }
 
         </script>
     </head>
@@ -340,12 +381,15 @@ include 'common.php';
                     <!-- Image and download button -->
                     <div class="col-sm-6" align="center" style="margin: auto;">
                         <div class="form-group">
-                            <img id="preview-image" src="images/default3.jpg" class="row" width="80%" height="80%" download="myImage"></br></br>
+                            <img id="preview-image" src="images/default.jpg" class="row" width="80%" height="80%">
+                            </br></br>
                         </div>
                         <div class="form-group">
                             <input class="btn btn-outline-primary" id="btn-download" name="btnDownload" onclick="downloadImage()" type="button" value="<?php echo $lang['BUTTON_CREATE_XMAS']; ?>" class="btn btn-default">
                         </div>
                     </div>
+                    <!--  <img style="display: none" src="" class="row" width="80%" height="80%" download="myImage"/>-->
+                    <a href="images/default.jpg" id = "pre-download-image" style="display: none" src="" class="row" width="80%" height="80%" download="myImage"/>
                 </div>
             </div>
         </div>
