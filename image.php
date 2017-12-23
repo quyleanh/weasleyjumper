@@ -33,6 +33,10 @@ include 'common.php';
                 width: 100%;
                 height:90%;
             }
+            .centerBlock {
+                display: table;
+                margin: auto;
+            }
         </style>
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -132,202 +136,197 @@ include 'common.php';
                 <div class="row ajax-call" id="xmasForm" action="function.php" method="get" role="form">
 
                     <!-- Column Face and Skin -->
-                    <div class="col-6" style="width: 90%; align: center;">
+                    <div class="col-sm-6" style="width: 90%;">
                         <div class="row">
-                            <!-- Choose Skin -->
-                            <div class="col-6 form-group" style="align: left;">
-                                <label for="name" class="col control-label"><?php echo $lang['LB_CHOOSE_SKIN']; ?></label>
-                                <div class="col">
-                                    <label>
-                                        <input type="radio" name="optionsSkins" id="optionsRadios1" value="option1" checked>
-                                        <?php echo $lang['LB_CHOOSE_SKIN_S1']; ?>
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="optionsSkins" id="optionsRadios2" value="option2">
-                                        <?php echo $lang['LB_CHOOSE_SKIN_S2']; ?>
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="optionsSkins" id="optionsRadios3" value="option3">
-                                        <?php echo $lang['LB_CHOOSE_SKIN_S3']; ?>
-                                    </label><br><br>
-                                </div>
-                            </div>
-                            
-                            <!-- Choose Face -->
-                            <div class="col-6 form-group">
-                                <label for="name" class="col control-label"><?php echo $lang['LB_CHOOSE_FACE']; ?></label>
-                                <div class="col">
-                                    <label>
-                                        <input type="radio" name="optionsFaces" id="optionsRadios1" value="option1" checked>
-                                        <?php echo $lang['LB_CHOOSE_FACE_F1']; ?>
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="optionsFaces" id="optionsRadios2" value="option2">
-                                        <?php echo $lang['LB_CHOOSE_FACE_F2']; ?>
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="optionsFaces" id="optionsRadios3" value="option3">
-                                        <?php echo $lang['LB_CHOOSE_FACE_F3']; ?>
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="optionsFaces" id="optionsRadios4" value="option4">
-                                        <?php echo $lang['LB_CHOOSE_FACE_F4']; ?>
-                                    </label><br>    
-                                    <label>
-                                        <input type="radio" name="optionsFaces" id="optionsRadios5" value="option5">
-                                        <?php echo $lang['LB_CHOOSE_FACE_F5']; ?>
-                                    </label><br><br>
-                                </div>
-                            </div>
+                            <div class="col-sm form-group center-block">
+                                
+                                <div class="form-group centerBlock text-left">
+                                    <!-- Choose Skin -->
+                                    <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_SKIN']; ?></label>
+                                    <div class="">
+                                        <label>
+                                            <input type="radio" name="optionsSkins" id="optionsRadios1" value="option1" checked>
+                                            <?php echo $lang['LB_CHOOSE_SKIN_S1']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsSkins" id="optionsRadios2" value="option2">
+                                            <?php echo $lang['LB_CHOOSE_SKIN_S2']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsSkins" id="optionsRadios3" value="option3">
+                                            <?php echo $lang['LB_CHOOSE_SKIN_S3']; ?>
+                                        </label><br><br>
+                                    </div>
 
-                            <div class="w-100"></div>
+                                    <!-- Choose Face -->
+                                    <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_FACE']; ?></label>
+                                    <div class="">
+                                        <label>
+                                            <input type="radio" name="optionsFaces" id="optionsRadios1" value="option1" checked>
+                                            <?php echo $lang['LB_CHOOSE_FACE_F1']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsFaces" id="optionsRadios2" value="option2">
+                                            <?php echo $lang['LB_CHOOSE_FACE_F2']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsFaces" id="optionsRadios3" value="option3">
+                                            <?php echo $lang['LB_CHOOSE_FACE_F3']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsFaces" id="optionsRadios4" value="option4">
+                                            <?php echo $lang['LB_CHOOSE_FACE_F4']; ?>
+                                        </label><br>    
+                                        <label>
+                                            <input type="radio" name="optionsFaces" id="optionsRadios5" value="option5">
+                                            <?php echo $lang['LB_CHOOSE_FACE_F5']; ?>
+                                        </label><br><br>
+                                    </div>
 
-                            <!-- Choose Hair -->
-                            <div class="col-6 form-group">
-                                <label for="name" class="col control-label"><?php echo $lang['LB_CHOOSE_HAIR']; ?></label>
-                                <div class="col">
-                                    <select id="optionsHairs" name="optionsHairs">
-                                        
-                                        <option id="optionsRadios1" value="option1"><?php echo $lang['LB_CHOOSE_HAIR_H01']; ?></option>  
-                                        <option id="optionsRadios2" value="option2"><?php echo $lang['LB_CHOOSE_HAIR_H02']; ?></option> 
-                                        <option id="optionsRadios3" value="option3"><?php echo $lang['LB_CHOOSE_HAIR_H03']; ?></option>  
-                                        <option id="optionsRadios4" value="option4"><?php echo $lang['LB_CHOOSE_HAIR_H04']; ?></option>  
-                                        <option id="optionsRadios5" value="option5"><?php echo $lang['LB_CHOOSE_HAIR_H05']; ?></option>  
-                                        <option id="optionsRadios6" value="option6"><?php echo $lang['LB_CHOOSE_HAIR_H06']; ?></option>  
-                                        <option id="optionsRadios7" value="option7"><?php echo $lang['LB_CHOOSE_HAIR_H07']; ?></option> 
-                                        <option id="optionsRadios8" value="option8"><?php echo $lang['LB_CHOOSE_HAIR_H08']; ?></option>  
-                                        <option id="optionsRadios9" value="option9"><?php echo $lang['LB_CHOOSE_HAIR_H09']; ?></option>  
-                                        <option id="optionsRadios10" value="option10"><?php echo $lang['LB_CHOOSE_HAIR_H10']; ?></option> 
-                                        <option id="optionsRadios11" value="option11"><?php echo $lang['LB_CHOOSE_HAIR_H11']; ?></option> 
-                                        <option id="optionsRadios12" value="option12"><?php echo $lang['LB_CHOOSE_HAIR_H12']; ?></option> 
-                                        <option id="optionsRadios13" value="option13"><?php echo $lang['LB_CHOOSE_HAIR_H13']; ?></option> 
-                                        <option id="optionsRadios14" value="option14"><?php echo $lang['LB_CHOOSE_HAIR_H14']; ?></option> 
-                                        <option id="optionsRadios15" value="option15"><?php echo $lang['LB_CHOOSE_HAIR_H15']; ?></option> 
-                                        
-                                    </select>
-                                    <br><br>
-                                </div>
-                            </div>
+                                    <!-- Choose Hair -->
+                                    <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_HAIR']; ?></label>
+                                    <div class="">
+                                        <select id="optionsHairs" name="optionsHairs">
+                                            
+                                            <option id="optionsRadios1" value="option1"><?php echo $lang['LB_CHOOSE_HAIR_H01']; ?></option>  
+                                            <option id="optionsRadios2" value="option2"><?php echo $lang['LB_CHOOSE_HAIR_H02']; ?></option> 
+                                            <option id="optionsRadios3" value="option3"><?php echo $lang['LB_CHOOSE_HAIR_H03']; ?></option>  
+                                            <option id="optionsRadios4" value="option4"><?php echo $lang['LB_CHOOSE_HAIR_H04']; ?></option>  
+                                            <option id="optionsRadios5" value="option5"><?php echo $lang['LB_CHOOSE_HAIR_H05']; ?></option>  
+                                            <option id="optionsRadios6" value="option6"><?php echo $lang['LB_CHOOSE_HAIR_H06']; ?></option>  
+                                            <option id="optionsRadios7" value="option7"><?php echo $lang['LB_CHOOSE_HAIR_H07']; ?></option> 
+                                            <option id="optionsRadios8" value="option8"><?php echo $lang['LB_CHOOSE_HAIR_H08']; ?></option>  
+                                            <option id="optionsRadios9" value="option9"><?php echo $lang['LB_CHOOSE_HAIR_H09']; ?></option>  
+                                            <option id="optionsRadios10" value="option10"><?php echo $lang['LB_CHOOSE_HAIR_H10']; ?></option> 
+                                            <option id="optionsRadios11" value="option11"><?php echo $lang['LB_CHOOSE_HAIR_H11']; ?></option> 
+                                            <option id="optionsRadios12" value="option12"><?php echo $lang['LB_CHOOSE_HAIR_H12']; ?></option> 
+                                            <option id="optionsRadios13" value="option13"><?php echo $lang['LB_CHOOSE_HAIR_H13']; ?></option> 
+                                            <option id="optionsRadios14" value="option14"><?php echo $lang['LB_CHOOSE_HAIR_H14']; ?></option> 
+                                            <option id="optionsRadios15" value="option15"><?php echo $lang['LB_CHOOSE_HAIR_H15']; ?></option> 
+                                            
+                                        </select>
+                                        <br><br><br>
+                                    </div>
 
-                            <!-- Choose Hair Color -->
-                            <div class="col-6 form-group">
-                                <label for="name" class="col control-label"><?php echo $lang['LB_CHOOSE_HAIR_COLOR']; ?></label>
-                                <div class="col">
-                                    <select id="optionsHairColors" name="optionsHairColors">
-                                        
-                                        <option id="optionsRadios1" value="option1"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_1']; ?></option> 
-                                        <option id="optionsRadios2" value="option2"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_2']; ?></option> 
-                                        <option id="optionsRadios3" value="option3"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_3']; ?></option> 
-                                        <option id="optionsRadios4" value="option4"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_4']; ?></option> 
-                                        <option id="optionsRadios5" value="option5"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_5']; ?></option> 
-                                        <option id="optionsRadios6" value="option6"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_6']; ?></option> 
-                                        <option id="optionsRadios7" value="option7"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_7']; ?></option> 
-                                        
-                                    </select>
-                                    <br><br>
+                                    <!-- Choose Hair Color -->
+                                    <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_HAIR_COLOR']; ?></label>
+                                    <div class="">
+                                        <select id="optionsHairColors" name="optionsHairColors">
+                                            
+                                            <option id="optionsRadios1" value="option1"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_1']; ?></option> 
+                                            <option id="optionsRadios2" value="option2"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_2']; ?></option> 
+                                            <option id="optionsRadios3" value="option3"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_3']; ?></option> 
+                                            <option id="optionsRadios4" value="option4"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_4']; ?></option> 
+                                            <option id="optionsRadios5" value="option5"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_5']; ?></option> 
+                                            <option id="optionsRadios6" value="option6"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_6']; ?></option> 
+                                            <option id="optionsRadios7" value="option7"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_7']; ?></option> 
+                                            
+                                        </select>
+                                        <br><br>    
+                                    </div>
+
+                                    <div class="w-100"></div>
                                 </div>
                             </div>
 
-                            <div class="w-100"></div>
+                            <!-- Column 2 -->
+                            <div class="col-sm form-group center-block text-center">
+                                
+                                <div class="form-group centerBlock text-left">
+                                    <!-- Choose Scraf -->
+                                    <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_SCARF']; ?></label>
+                                    <div class="">
+                                        <label>
+                                            <input type="radio" name="optionsScarfs" id="optionsRadios1" value="option1" checked>
+                                            Slytherin
+                                            <?php //echo $lang['BG_1']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsScarfs" id="optionsRadios2" value="option2">
+                                             Gryffindor
+                                            <?php //echo $lang['BG_5']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsScarfs" id="optionsRadios3" value="option3">
+                                             Hufflepuff
+                                            <?php //echo $lang['BG_5']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsScarfs" id="optionsRadios4" value="option4">
+                                             Ravenclaw
+                                            <?php //echo $lang['BG_5']; ?>
+                                        </label><br><br>
+                                    </div>
 
-                            <!-- Choose Scraf -->
-                            <div class="col-6 form-group">
-                                <label for="name" class="col control-label"><?php echo $lang['LB_CHOOSE_SCARF']; ?></label>
-                                <div class="col">
-                                    <label>
-                                        <input type="radio" name="optionsScarfs" id="optionsRadios1" value="option1" checked>
-                                        Slytherin
-                                        <?php //echo $lang['BG_1']; ?>
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="optionsScarfs" id="optionsRadios2" value="option2">
-                                         Gryffindor
-                                        <?php //echo $lang['BG_5']; ?>
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="optionsScarfs" id="optionsRadios3" value="option3">
-                                         Hufflepuff
-                                        <?php //echo $lang['BG_5']; ?>
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="optionsScarfs" id="optionsRadios4" value="option4">
-                                         Ravenclaw
-                                        <?php //echo $lang['BG_5']; ?>
-                                    </label><br><br>
+                                    <!-- Choose Jumper -->
+                                    <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_JUMPER']; ?></label>
+                                    <div class=""  id="chooseJumper">
+                                        <label>
+                                            <input type="radio" name="optionsJumpers" id="optionsRadios1" value="option1" checked>
+                                            <?php echo $lang['LB_CHOOSE_JUMPER_C1']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsJumpers" id="optionsRadios2" value="option2">
+                                            <?php echo $lang['LB_CHOOSE_JUMPER_C2']; ?>
+                                        </label><br><br>
+                                    </div>
+
+
+                                    <!-- Choose Letter -->
+                                    <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_NAME']; ?></label>
+                                    <div class="">
+                                        <select id="optionsLetters" name="optionsLetters">
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                            <option>D</option>
+                                            <option>E</option>
+                                            <option>F</option>
+                                            <option>G</option>
+                                            <option>H</option>
+                                            <option>I</option>
+                                            <option>J</option>
+                                            <option>K</option>
+                                            <option>L</option>
+                                            <option>M</option>
+                                            <option>N</option>
+                                            <option>O</option>
+                                            <option>P</option>
+                                            <option>Q</option>
+                                            <option>R</option>
+                                            <option>S</option>
+                                            <option>T</option>
+                                            <option>U</option>
+                                            <option>V</option>
+                                            <option>W</option>
+                                            <option>X</option>
+                                            <option>Y</option>
+                                            <option>Z</option>
+                                        </select>
+                                        <br><br>
+                                    </div>
+
+
+                                    <!-- Choose background -->
+                                    <label for="bg" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_BACKGROUND']; ?></label>
+                                    <div class="">
+                                        <select id="optionsBgs" name="optionsBgs">
+                                            <option id="optionsRadios1" value="option1"><?php echo $lang['BG_1']; ?></option>
+                                            <option id="optionsRadios2" value="option2"><?php echo $lang['BG_2']; ?></option>
+                                            <!-- <option id="optionsRadios3" value="option3"><?php //echo $lang['BG_3']; ?></option>
+                                            <option id="optionsRadios4" value="option4"><?php //echo $lang['BG_4']; ?></option>
+                                            <option id="optionsRadios5" value="option5"><?php //echo $lang['BG_5']; ?></option> -->
+                                        </select>
+                                    </div> 
+
+                                    <div class="w-100"></div>
                                 </div>
                             </div>
-
-                            <!-- Choose Jumper -->
-                            <div class="col-6 form-group">
-                                <label for="name" class="col control-label"><?php echo $lang['LB_CHOOSE_JUMPER']; ?></label>
-                                <div class="col-sm-10"  id="chooseJumper">
-                                    <label>
-                                        <input type="radio" name="optionsJumpers" id="optionsRadios1" value="option1" checked>
-                                        <?php echo $lang['LB_CHOOSE_JUMPER_C1']; ?>
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="optionsJumpers" id="optionsRadios2" value="option2">
-                                        <?php echo $lang['LB_CHOOSE_JUMPER_C2']; ?>
-                                    </label><br><br>
-                                </div>
-                            </div>
-                            <div class="w-100"></div>
-
-                            <!-- Choose Letter -->
-                            <div class="col-6 form-group">
-                                <label for="name" class="col control-label"><?php echo $lang['LB_CHOOSE_NAME']; ?></label>
-                                <div class="col">
-                                    <select id="optionsLetters" name="optionsLetters">
-                                        <option>A</option>
-                                        <option>B</option>
-                                        <option>C</option>
-                                        <option>D</option>
-                                        <option>E</option>
-                                        <option>F</option>
-                                        <option>G</option>
-                                        <option>H</option>
-                                        <option>I</option>
-                                        <option>J</option>
-                                        <option>K</option>
-                                        <option>L</option>
-                                        <option>M</option>
-                                        <option>N</option>
-                                        <option>O</option>
-                                        <option>P</option>
-                                        <option>Q</option>
-                                        <option>R</option>
-                                        <option>S</option>
-                                        <option>T</option>
-                                        <option>U</option>
-                                        <option>V</option>
-                                        <option>W</option>
-                                        <option>X</option>
-                                        <option>Y</option>
-                                        <option>Z</option>
-                                    </select>
-                                    <br><br>
-                                </div>
-                            </div>
-
-                            <!-- Choose background -->
-                            <div class="col-6 form-group">
-                                <label for="bg" class="col control-label"><?php echo $lang['LB_CHOOSE_BACKGROUND']; ?></label>
-                                <div class="col">
-                                    <select id="optionsBgs" name="optionsBgs">
-                                        <option id="optionsRadios1" value="option1"><?php echo $lang['BG_1']; ?></option>
-                                        <option id="optionsRadios2" value="option2"><?php echo $lang['BG_2']; ?></option>
-                                        <!-- <option id="optionsRadios3" value="option3"><?php //echo $lang['BG_3']; ?></option>
-                                        <option id="optionsRadios4" value="option4"><?php //echo $lang['BG_4']; ?></option>
-                                        <option id="optionsRadios5" value="option5"><?php //echo $lang['BG_5']; ?></option> -->
-                                    </select>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
                     <!-- Image and download button -->
-                    <div class="col-6" align="center" style="margin: auto;">
+                    <div class="col-sm-6" align="center" style="margin: auto;">
                         <div class="form-group">
                             <img id="preview-image" src="images/default3.jpg" class="row" width="80%" height="80%" download="myImage"></br></br>
                         </div>
