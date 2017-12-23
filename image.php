@@ -8,7 +8,7 @@ include 'common.php';
         <link rel="stylesheet" href="styles/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta property="og:url"                content="https://hogwarts.vn/WeasleyJumper" />
+        <meta property="og:url"                content="https://hogwarts.vn/weasleyjumper" />
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="WeasleyJumper - Hogwarts.vn" />
         <meta property="og:description"        content="Christmas 2017 - Nhận áo len Weasley của bạn!" />
