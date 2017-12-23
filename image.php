@@ -367,8 +367,8 @@ include 'common.php';
                                             <option id="optionsRadios1" value="option1"><?php echo $lang['BG_1']; ?></option>
                                             <option id="optionsRadios2" value="option2"><?php echo $lang['BG_2']; ?></option>
                                             <option id="optionsRadios3" value="option3"><?php echo $lang['BG_3']; ?></option>
-                                            <!-- <option id="optionsRadios4" value="option4"><?php //echo $lang['BG_4']; ?></option>
-                                            <option id="optionsRadios5" value="option5"><?php //echo $lang['BG_5']; ?></option> -->
+                                            <option id="optionsRadios4" value="option4"><?php echo $lang['BG_4']; ?></option>
+                                            <option id="optionsRadios5" value="option5"><?php echo $lang['BG_5']; ?></option>
                                         </select>
                                     </div> 
 

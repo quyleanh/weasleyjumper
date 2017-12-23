@@ -2,31 +2,31 @@
 
 // Get option from user selections
 // output is file name, make sure the file name correct
-function getOptions($bg = 'option1',
+function getOptions($bgOption = 'option1',
                     $skinOption = 'option2', 
                     $faceOption = 'option1', 
                     $hairOption = 'option1', 
                     $hairColorOption = 'option1', 
                     $scarfOption = 'option1', 
                     $letterOption = 'D') {
-    switch ($bg) {
+    switch ($bgOption) {
         case 'option1':
             $bg = 'Bg1';
             break;
         case 'option2':
             $bg = 'Bg2';
             break;
-        // case 'option3':
-        //     $face = 'Bg3';
-        //     break;
-        // case 'option4':
-        //     $face = 'Bg4';
-        //     break;
-        // case 'option5':
-        //     $face = 'Bg5';
-        //     break;
+        case 'option3':
+            $bg = 'Bg3';
+            break;
+        case 'option4':
+            $bg = 'Bg4';
+            break;
+        case 'option5':
+            $bg = 'Bg5';
+            break;
         default:
-            $face = 'Bg1';
+            $bg = 'Bg1';
             break;
     }
 
@@ -113,7 +113,7 @@ function getOptions($bg = 'option1',
             $hair = 'H15';
             break;
         default:
-            $hair = '1';
+            $hair = 'H01';
             break;
     }
 
@@ -140,7 +140,7 @@ function getOptions($bg = 'option1',
             $color = 'purple';
             break;
         default:
-            $option1 = 'blonde';
+            $color = 'blonde';
             break;
     }
 
@@ -193,7 +193,7 @@ if (file_exists($folderName)) {
         }
     }
 } else {
-    mkdir($folderName, 0700);
+    mkdir($folderName, 0755);
 }
 
 list($bg, $skin, $face, $hair, $color, $scarf, $letter) = getOptions($_GET["optionsBgs"], $_GET["optionsSkins"], $_GET["optionsFaces"], $_GET["optionsHairs"], $_GET["optionsHairColors"], $_GET["scarf"], $_GET["letter"]);
