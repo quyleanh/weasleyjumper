@@ -95,6 +95,12 @@ $lang['LB_CHOOSE_HAIR_COLOR_7'] = 'Purple';
 
 
 // Jumper color
-$lang['LB_CHOOSE_JUMPER_C1'] = 'Purple:';
+$lang['LB_CHOOSE_JUMPER_C1'] = 'Red';
 $lang['LB_CHOOSE_JUMPER_C2'] = 'Pink';
+$lang['LB_CHOOSE_JUMPER_C3'] = 'Blue';
+$lang['LB_CHOOSE_JUMPER_C4'] = 'Yellow';
+$lang['LB_CHOOSE_JUMPER_C5'] = 'Purple';
+$lang['LB_CHOOSE_JUMPER_C6'] = 'Orange';
+$lang['LB_CHOOSE_JUMPER_C7'] = 'Gray';
+
 ?>

@@ -95,6 +95,12 @@ $lang['LB_CHOOSE_HAIR_COLOR_7'] = 'Tím Hogwarts';
 
 
 // Jumper color
-$lang['LB_CHOOSE_JUMPER_C1'] = 'Áo tím:';
-$lang['LB_CHOOSE_JUMPER_C2'] = 'Áo hồng';
+$lang['LB_CHOOSE_JUMPER_C1'] = 'Đỏ bordeaux';
+$lang['LB_CHOOSE_JUMPER_C2'] = 'Hồng thạch anh';
+$lang['LB_CHOOSE_JUMPER_C3'] = 'Xanh thanh bình';
+$lang['LB_CHOOSE_JUMPER_C4'] = 'Vàng hổ phách';
+$lang['LB_CHOOSE_JUMPER_C5'] = 'Tím mộng mơ';
+$lang['LB_CHOOSE_JUMPER_C6'] = 'Cam dạ quang';
+$lang['LB_CHOOSE_JUMPER_C7'] = 'Xám lục bảo';
+
 ?>

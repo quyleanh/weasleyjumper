@@ -12,7 +12,7 @@ include 'common.php';
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="WeasleyJumper - Hogwarts.vn" />
         <meta property="og:description"        content="Christmas 2017 - Nhận áo len Weasley của bạn!" />
-        <meta property="og:image"              content="https://i.imgur.com/jjCIKXj.png" />
+        <meta property="og:image"              content="https://i.imgur.com/W0BoIav.jpg" />
 
 
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -268,6 +268,18 @@ include 'common.php';
                                         <label>
                                             <input type="radio" name="optionsJumpers" id="optionsRadios2" value="option2">
                                             <?php echo $lang['LB_CHOOSE_JUMPER_C2']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsJumpers" id="optionsRadios3" value="option3">
+                                            <?php echo $lang['LB_CHOOSE_JUMPER_C3']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsJumpers" id="optionsRadios4" value="option4">
+                                            <?php echo $lang['LB_CHOOSE_JUMPER_C4']; ?>
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="optionsJumpers" id="optionsRadios5" value="option5">
+                                            <?php echo $lang['LB_CHOOSE_JUMPER_C5']; ?>
                                         </label><br><br>
                                     </div>
 
