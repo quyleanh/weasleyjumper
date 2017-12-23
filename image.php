@@ -120,7 +120,7 @@ include 'common.php';
                         document.getElementById("pre-download-image").href = this.responseText;
                         var d = new Date();
                         var month = d.getMonth() + 1;
-                        var fileName = d.getFullYear() + "" + month + "" + d.getDate() + "" + d.getTime() + ".jpg";
+                        var fileName = d.getFullYear() + "" + month + "" + d.getDate() + "" + d.getTime() + ".png";
                         var a = document.getElementById("pre-download-image");
                         a.download = fileName;
                         a.click();
