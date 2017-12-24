@@ -201,8 +201,8 @@ $haveGlass = "no";
 $shirt = rand(1, 6); //choose random shirt
 //define the width and height of our images
 if ($isDownload == "no") { //If not downloading, use small image
-    define("WIDTH", 300);
-    define("HEIGHT", 300);
+    define("WIDTH", 200);
+    define("HEIGHT", 200);
 } else {
     define("WIDTH", 1000);
     define("HEIGHT", 1000);
