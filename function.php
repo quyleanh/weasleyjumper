@@ -196,7 +196,6 @@ if (file_exists($folderName)) {
 list($bg, $skin, $face, $hair, $color, $scarf, $letter) = getOptions($_GET["optionsBgs"], $_GET["optionsSkins"], $_GET["optionsFaces"], $_GET["optionsHairs"], $_GET["optionsHairColors"], $_GET["scarf"], $_GET["letter"]);
 $haveGlass = "no";
 $shirt = rand(1, 9); //choose random shirt
-$shirt_chosen = 1;
 //define the width and height of our images
 if ($isDownload == "no") { //If not downloading, use small image
     define("WIDTH", 300);
@@ -218,7 +217,6 @@ imagefill($dest_image, 0, 0, $trans_background);
 
 //take create image resources out of the 3 pngs we want to merge into destination image
 if ($isDownload == "no") {
-    $shirt_chosen = $shirt;
     $bgPath = 'images/background-min/' . $bg . '.jpg';
     $skinPath = 'images/skin-min/' . $skin . '.png';
     $letterPath = 'images/letter-min/' . $letter . '.png';
@@ -232,7 +230,7 @@ if ($isDownload == "no") {
     $letterPath = 'images/letter/' . $letter . '.png';
     $facePath = 'images/face/' . $face . '.png';
     $hairPath = 'images/hair/' . $hair . '.png';
-    $shirtPath = 'images/shirt/' . $shirt_chosen . '.png';
+    $shirtPath = 'images/shirt/' . $shirt . '.png';
     $scarfPath = 'images/scarf/' . $scarf . '.png';
 }
 
