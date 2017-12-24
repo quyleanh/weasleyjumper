@@ -100,7 +100,7 @@ function getOptions($bgOption = 'option1',
         case 'option11':
             $hair = 'H11';
             break;
-        case 'option13':
+        case 'option12':
             $hair = 'H12';
             break;
         case 'option13':
