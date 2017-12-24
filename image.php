@@ -61,7 +61,7 @@ include 'common.php';
                     scarf_value = $("input[name='optionsScarfs']:checked").val();
                     letter_value = $("#optionsLetters option:selected").text();
                     //glass_value = $("input[name='optionsGlass']:checked").val();
-                      // alert(letter_value);
+                    // alert(letter_value);
 
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
@@ -70,7 +70,7 @@ include 'common.php';
                             document.getElementById("preview-image").src = this.responseText;
                         }
                     };
-                    xmlhttp.open("GET", "function.php?optionsBgs=" + bg_value + "&optionsSkins=" + skin_value + 
+                    xmlhttp.open("GET", "function.php?optionsBgs=" + bg_value + "&optionsSkins=" + skin_value +
                             "&optionsFaces=" + face_value + "&optionsHairs=" + hair_value +
                             "&optionsHairColors=" + color_value + "&scarf=" + scarf_value +
                             "&letter=" + letter_value + "&download=no", true);
@@ -90,7 +90,7 @@ include 'common.php';
                      });*/
                 });
                 $('#chooseJumper').change(function () {
-                    alert('"Má không nghĩ màu này hợp với con. Để má chọn cho", Molly nói.');           
+                    alert('"Má không nghĩ màu này hợp với con. Để má chọn cho", Molly nói.');
                 });
             });
 
@@ -141,12 +141,12 @@ include 'common.php';
                 //        var month = d.getMonth() + 1;
                 //        var fileName = d.getFullYear() + "" + month + "" + d.getDate() + "" + d.getTime() + ".jpg";
                 //var a = document.createElement('a');
-             //   a.href = urlImage;
-               // a.download = fileName;
-              //  document.body.appendChild(a);
-              //  a.click();
-               // document.body.removeChild(a);
-           }
+                //   a.href = urlImage;
+                // a.download = fileName;
+                //  document.body.appendChild(a);
+                //  a.click();
+                // document.body.removeChild(a);
+            }
 
         </script>
     </head>
@@ -180,7 +180,7 @@ include 'common.php';
                     <div class="col-sm-6" style="width: 90%;">
                         <div class="row">
                             <div class="col-sm form-group center-block">
-                                
+
                                 <div class="form-group centerBlock text-left">
                                     <!-- Choose Skin -->
                                     <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_SKIN']; ?></label>
@@ -228,7 +228,7 @@ include 'common.php';
                                     <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_HAIR']; ?></label>
                                     <div class="">
                                         <select id="optionsHairs" name="optionsHairs">
-                                            
+
                                             <option id="optionsRadios1" value="option1"><?php echo $lang['LB_CHOOSE_HAIR_H01']; ?></option>  
                                             <option id="optionsRadios2" value="option2"><?php echo $lang['LB_CHOOSE_HAIR_H02']; ?></option> 
                                             <option id="optionsRadios3" value="option3"><?php echo $lang['LB_CHOOSE_HAIR_H03']; ?></option>  
@@ -244,7 +244,7 @@ include 'common.php';
                                             <option id="optionsRadios13" value="option13"><?php echo $lang['LB_CHOOSE_HAIR_H13']; ?></option> 
                                             <option id="optionsRadios14" value="option14"><?php echo $lang['LB_CHOOSE_HAIR_H14']; ?></option> 
                                             <option id="optionsRadios15" value="option15"><?php echo $lang['LB_CHOOSE_HAIR_H15']; ?></option> 
-                                            
+
                                         </select>
                                         <br><br><br>
                                     </div>
@@ -253,7 +253,7 @@ include 'common.php';
                                     <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_HAIR_COLOR']; ?></label>
                                     <div class="">
                                         <select id="optionsHairColors" name="optionsHairColors">
-                                            
+
                                             <option id="optionsRadios1" value="option1"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_1']; ?></option> 
                                             <option id="optionsRadios2" value="option2"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_2']; ?></option> 
                                             <option id="optionsRadios3" value="option3"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_3']; ?></option> 
@@ -261,7 +261,7 @@ include 'common.php';
                                             <option id="optionsRadios5" value="option5"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_5']; ?></option> 
                                             <option id="optionsRadios6" value="option6"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_6']; ?></option> 
                                             <option id="optionsRadios7" value="option7"><?php echo $lang['LB_CHOOSE_HAIR_COLOR_7']; ?></option> 
-                                            
+
                                         </select>
                                         <br><br>    
                                     </div>
@@ -272,7 +272,7 @@ include 'common.php';
 
                             <!-- Column 2 -->
                             <div class="col-sm form-group center-block text-center">
-                                
+
                                 <div class="form-group centerBlock text-left">
                                     <!-- Choose Scraf -->
                                     <label for="name" class="font-weight-bold control-label"><?php echo $lang['LB_CHOOSE_SCARF']; ?></label>
@@ -284,17 +284,17 @@ include 'common.php';
                                         </label><br>
                                         <label>
                                             <input type="radio" name="optionsScarfs" id="optionsRadios2" value="option2">
-                                             Gryffindor
+                                            Gryffindor
                                             <?php //echo $lang['BG_5']; ?>
                                         </label><br>
                                         <label>
                                             <input type="radio" name="optionsScarfs" id="optionsRadios3" value="option3">
-                                             Hufflepuff
+                                            Hufflepuff
                                             <?php //echo $lang['BG_5']; ?>
                                         </label><br>
                                         <label>
                                             <input type="radio" name="optionsScarfs" id="optionsRadios4" value="option4">
-                                             Ravenclaw
+                                            Ravenclaw
                                             <?php //echo $lang['BG_5']; ?>
                                         </label><br><br>
                                     </div>
@@ -381,15 +381,19 @@ include 'common.php';
                     <!-- Image and download button -->
                     <div class="col-sm-6" align="center" style="margin: auto;">
                         <div class="form-group">
-                            <img id="preview-image" src="images/default2.jpg" class="row" width="80%" height="80%">
+                            <img id="preview-image" src="images/default.jpg" class="row" width="80%" height="80%">
                             </br></br>
                         </div>
                         <div class="form-group">
                             <input class="btn btn-outline-primary" id="btn-download" name="btnDownload" onclick="downloadImage()" type="button" value="<?php echo $lang['BUTTON_CREATE_XMAS']; ?>" class="btn btn-default">
                         </div>
                     </div>
+                    <div style="position: relative; margin-left: 0.1%; margin-top: 0.01%">
+                        <text style="color: #3f3f3f">Developed by Lincoln Nguyen and Quy Le Anh</text>
+                    </div>
                     <!--  <img style="display: none" src="" class="row" width="80%" height="80%" download="myImage"/>-->
-                    <a href="images/default2.jpg" id = "pre-download-image" style="display: none" src="" class="row" width="80%" height="80%" download="myImage"/>
+                    <a href="images/default.jpg" id = "pre-download-image" style="display: none" src="" class="row" width="80%" height="80%" download="myImage"></a>
+                    
                 </div>
             </div>
         </div>

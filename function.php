@@ -2,13 +2,7 @@
 
 // Get option from user selections
 // output is file name, make sure the file name correct
-function getOptions($bgOption = 'option1',
-                    $skinOption = 'option2', 
-                    $faceOption = 'option1', 
-                    $hairOption = 'option1', 
-                    $hairColorOption = 'option1', 
-                    $scarfOption = 'option1', 
-                    $letterOption = 'D') {
+function getOptions($bgOption = 'option1', $skinOption = 'option1', $faceOption = 'option1', $hairOption = 'option1', $hairColorOption = 'option1', $scarfOption = 'option1', $letterOption = 'A') {
     switch ($bgOption) {
         case 'option1':
             $bg = 'Bg1';
@@ -175,6 +169,9 @@ function save_image($inPath, $outPath) { //Download images from remote server
     fclose($out);
 }
 
+function generateRandomString($length = 10) {
+    return substr(str_shuffle(str_repeat($x = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length / strlen($x)))), 1, $length);
+}
 ?>
 
 <?php
@@ -198,7 +195,7 @@ if (file_exists($folderName)) {
 
 list($bg, $skin, $face, $hair, $color, $scarf, $letter) = getOptions($_GET["optionsBgs"], $_GET["optionsSkins"], $_GET["optionsFaces"], $_GET["optionsHairs"], $_GET["optionsHairColors"], $_GET["scarf"], $_GET["letter"]);
 $haveGlass = "no";
-$shirt = rand(1, 6); //choose random shirt
+$shirt = rand(1, 9); //choose random shirt
 //define the width and height of our images
 if ($isDownload == "no") { //If not downloading, use small image
     define("WIDTH", 300);
@@ -257,10 +254,10 @@ switch ($color) {
     case 'black':
         $rgb = array(255 - 30, 255 - 30, 255 - 30);
         break;
-     case 'brown':
+    case 'brown':
         $rgb = array(255 - 119, 255 - 59, 255 - 50);
         break;
-     case 'purple':
+    case 'purple':
         $rgb = array(255 - 111, 255 - 43, 255 - 144);
         break;
     default:
@@ -307,7 +304,7 @@ $result = $datetime->format('Y-m-d H:i:s');
 $result = str_replace(":", "", $result);
 $result = str_replace(" ", "_", $result);
 
-$path = "avas/" . $result . ".png";
+$path = "avas/" . $result . "_" . generateRandomString(7) . ".png";
 
 //send the appropriate headers and output the image in the browser
 header('Content-Type: image/png');
