@@ -196,6 +196,7 @@ if (file_exists($folderName)) {
 list($bg, $skin, $face, $hair, $color, $scarf, $letter) = getOptions($_GET["optionsBgs"], $_GET["optionsSkins"], $_GET["optionsFaces"], $_GET["optionsHairs"], $_GET["optionsHairColors"], $_GET["scarf"], $_GET["letter"]);
 $haveGlass = "no";
 $shirt = rand(1, 9); //choose random shirt
+$shirt_chosen = $shirt;
 //define the width and height of our images
 if ($isDownload == "no") { //If not downloading, use small image
     define("WIDTH", 300);
@@ -230,7 +231,7 @@ if ($isDownload == "no") {
     $letterPath = 'images/letter/' . $letter . '.png';
     $facePath = 'images/face/' . $face . '.png';
     $hairPath = 'images/hair/' . $hair . '.png';
-    $shirtPath = 'images/shirt/' . $shirt . '.png';
+    $shirtPath = 'images/shirt/' . $shirt_chosen . '.png';
     $scarfPath = 'images/scarf/' . $scarf . '.png';
 }
 
