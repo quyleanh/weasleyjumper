@@ -381,7 +381,7 @@ include 'common.php';
                     <!-- Image and download button -->
                     <div class="col-sm-6" align="center" style="margin: auto;">
                         <div class="form-group">
-                            <img id="preview-image" src="images/default2.jpg" class="row" width="50%" height="50%">
+                            <img id="preview-image" src="images/default2.jpg" class="row" width="80%" height="80%">
                             </br></br>
                         </div>
                         <div class="form-group">
