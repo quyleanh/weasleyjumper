@@ -381,7 +381,7 @@ include 'common.php';
                     <!-- Image and download button -->
                     <div class="col-sm-6" align="center" style="margin: auto;">
                         <div class="form-group">
-                            <img id="preview-image" src="images/default.jpg" class="row" width="80%" height="80%">
+                            <img id="preview-image" src="images/default2.jpg" class="row" width="80%" height="80%">
                             </br></br>
                         </div>
                         <div class="form-group">
@@ -389,7 +389,7 @@ include 'common.php';
                         </div>
                     </div>
                     <!--  <img style="display: none" src="" class="row" width="80%" height="80%" download="myImage"/>-->
-                    <a href="images/default.jpg" id = "pre-download-image" style="display: none" src="" class="row" width="80%" height="80%" download="myImage"/>
+                    <a href="images/default2.jpg" id = "pre-download-image" style="display: none" src="" class="row" width="80%" height="80%" download="myImage"/>
                 </div>
             </div>
         </div>
