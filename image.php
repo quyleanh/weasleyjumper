@@ -389,7 +389,7 @@ include 'common.php';
                         </div>
                     </div>
                     <div style="position: relative; margin-left: 0.1%; margin-top: 0.01%">
-                        <text style="color: #3f3f3f">Developed by Lincoln Nguyen and Quy Le Anh</text>
+                        <text style="color: #3f3f3f; font-size: 15px">Developed by Lincoln Nguyen and Quy Le Anh</text>
                     </div>
                     <!--  <img style="display: none" src="" class="row" width="80%" height="80%" download="myImage"/>-->
                     <a href="images/default4.jpg" id = "pre-download-image" style="display: none" src="" class="row" width="80%" height="80%" download="myImage"></a>
