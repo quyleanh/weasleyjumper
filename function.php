@@ -158,7 +158,7 @@ function getOptions($bgOption = 'option1',
             $scarf = 'Ravenclaw';
             break;
         default:
-            $scarf = 'Ravenclaw';
+            $scarf = 'Slytherin';
             break;
     }
     $letter = $letterOption;
