@@ -381,7 +381,7 @@ include 'common.php';
                     <!-- Image and download button -->
                     <div class="col-sm-6" align="center" style="margin: auto;">
                         <div class="form-group">
-                            <img id="preview-image" src="images/default.jpg" class="row" width="80%" height="80%">
+                            <img id="preview-image" src="images/default4.jpg" class="row" width="80%" height="80%">
                             </br></br>
                         </div>
                         <div class="form-group">
@@ -392,7 +392,7 @@ include 'common.php';
                         <text style="color: #3f3f3f">Developed by Lincoln Nguyen and Quy Le Anh</text>
                     </div>
                     <!--  <img style="display: none" src="" class="row" width="80%" height="80%" download="myImage"/>-->
-                    <a href="images/default.jpg" id = "pre-download-image" style="display: none" src="" class="row" width="80%" height="80%" download="myImage"></a>
+                    <a href="images/default4.jpg" id = "pre-download-image" style="display: none" src="" class="row" width="80%" height="80%" download="myImage"></a>
                     
                 </div>
             </div>
